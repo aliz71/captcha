@@ -25,7 +25,7 @@ class CaptchaServiceProvider extends ServiceProvider
         ], 'config');
 
         // HTTP routing
-        if (strpos($this->app->version(), 'Lumen') !== false) {
+        if (strpos($this->app->version(), 'Lumen') != false) {
             /* @var Router $router */
             $router = $this->app;
             $router->get('captcha[/api/{config}]', 'Mews\Captcha\LumenCaptchaController@getCaptchaApi');
